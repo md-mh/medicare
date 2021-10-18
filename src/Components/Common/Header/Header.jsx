@@ -10,12 +10,13 @@ const Header = () => {
         <>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="/">Medicare</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <Link className="nav-link" to="/home">Home</Link>
                             <Link className="nav-link" to="/link">Link</Link>
+                            <Link className="nav-link" to="/review">Review</Link>
 
                             {user.email && <span className="nav-link loginUser" >{user.displayName}</span>}
                             {user.email ? <button onClick={logOut} className="nav-link login" >Logout</button>

@@ -5,7 +5,9 @@ const Singleservice = () => {
     const { slug } = useParams();
     const [one, setOne] = useState([]);
     useEffect(() => {
-        fetch('./medical.json')
+        const url = `./ medical.json/`
+        console.log(url)
+        fetch(url)
             .then(res => res.json())
             .then(data => setOne(data));
         console.log(one);
@@ -16,6 +18,7 @@ const Singleservice = () => {
             <h2> This is {one.length}</h2>
         </div>
     );
-};
+}
+
 
 export default Singleservice;

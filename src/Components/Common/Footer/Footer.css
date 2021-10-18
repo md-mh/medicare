@@ -4,3 +4,7 @@ footer{
     background-size: cover;  
     color: whitesmoke;
 }
+footer svg{
+    color: whitesmoke;
+    margin: 5px 10px;
+}

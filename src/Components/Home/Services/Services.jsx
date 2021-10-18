@@ -12,7 +12,7 @@ const Services = () => {
     }, []);
     return (
         <Container>
-            <h1 className="text-center py-3">Our Service</h1>
+            <h1 className="text-center py-3">Our <span className="text-primary">Service</span></h1>
             {/* Bootstrap responsive row */}
             <Row xs={1} md={2} lg={3} className="g-4 py-4">
                 {

@@ -2,25 +2,25 @@
   {
     "id": "101",
     "title": "Anesthesiology",
-    "description": "The UCLA Health anesthesiology team is made up of leaders in clinical care and research. Our team includes more than 200 clinical and research faculty. More than 100 residents and fellows, nurse anesthetists and clinical staff support them in delivering safe, effective care.",
+    "description": "The Medicare Health anesthesiology team is made up of leaders in clinical care and research. Our team includes more than 200 clinical and research faculty. More than 100 residents and fellows, nurse anesthetists and clinical staff support them in delivering safe, effective care.",
     "img": "https://i.ibb.co/k6GYZHZ/anesthesiology.png"
   },
   {
     "id": "102",
     "title": "Clinical Nutrition",
-    "description": "The UCLA Center for Human Nutrition is at the forefront of clinical practice and nutrition research. Our aim is to help patients and the community understand how nutrition affects overall health and wellness.",
+    "description": "The Medicare Center for Human Nutrition is at the forefront of clinical practice and nutrition research. Our aim is to help patients and the community understand how nutrition affects overall health and wellness.",
     "img": "https://i.ibb.co/fnsgrpn/clinical-nutrition.png"
   },
   {
     "id": "103",
     "title": "Cardiovascular",
-    "description": "The UCLA Division of Heart and Vascular Services has been providing the most advanced, world-class cardiovascular care for more than 25 years. Nationally, we rank 9th in Cardiology, as determined by U.S. News & World Report.",
+    "description": "The Medicare Division of Heart and Vascular Services has been providing the most advanced, world-class cardiovascular care for more than 25 years. Nationally, we rank 9th in Cardiology, as determined by U.S. News & World Report.",
     "img": "https://i.ibb.co/SdVHtSH/cardiovascular.png"
   },
   {
     "id": "104",
     "title": "Pediatrics",
-    "description": "At UCLA Health, we provide innovative health care services from birth to 21 that focus on your child’s specific needs. Our pediatric and family medicine physicians deliver",
+    "description": "At Medicare Health, we provide innovative health care services from birth to 21 that focus on your child’s specific needs. Our pediatric and family medicine physicians deliver",
     "img": "https://i.ibb.co/B6pScjb/pediatrics.png"
   },
   {
@@ -32,7 +32,7 @@
   {
     "id": "106",
     "title": "Cancer Care",
-    "description": "At UCLA Health, teams of specialists work together to treat and assist cancer patients and their families. This multidisciplinary approach helps patients and family members confront both the immediate and long-term effects of cancer.",
+    "description": "At Medicare Health, teams of specialists work together to treat and assist cancer patients and their families. This multidisciplinary approach helps patients and family members confront both the immediate and long-term effects of cancer.",
     "img": "https://i.ibb.co/j6TRjqC/Cancer.png"
   }
 ]
