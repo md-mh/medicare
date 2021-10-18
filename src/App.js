@@ -5,6 +5,8 @@ import Footer from "./Components/Common/Footer/Footer";
 import Header from "./Components/Common/Header/Header";
 import Nopage from "./Components/Common/Nopage/Nopage";
 import Home from "./Components/Home/Home";
+import Singleservice from "./Components/Home/Services/Singleservice/Singleservice";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import AuthProvider from "./Context/AuthProvider";
 
 
@@ -18,6 +20,7 @@ function App() {
           <Route path="/home"> <Home></Home></Route>
           <Route path="/login"> <Login></Login></Route>
           <Route path="/registration"> <Registration></Registration> </Route>
+          <PrivateRoute path="/service/:slug"><Singleservice></Singleservice></PrivateRoute>
 
           <Route path='/*'><Nopage></Nopage></Route>
         </Switch>

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Serviceitem.css'
 
 const Serviceitem = (props) => {
     // take data using props 
-    const { title, img, description } = props.service;
+    const { id, title, img, description } = props.service;
 
     return (
         <Col>
@@ -13,10 +14,14 @@ const Serviceitem = (props) => {
                 <Card.Img variant="top" src={img} className="card-img" />
                 <Card.Body>
                     <Card.Title className="fw-bold">{title}</Card.Title>
-                    <Card.Text>{description.slice(0, 200)}</Card.Text>
+                    <Card.Text>{description.slice(0, 150)}</Card.Text>
+
+                    <Link to={`service/${id}`}>
+                        <Button variant="info"> Book for {title}</Button>
+                    </Link>
                 </Card.Body>
             </Card>
-        </Col>
+        </Col >
     );
 };
 

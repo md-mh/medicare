@@ -8,7 +8,7 @@ const Services = () => {
         fetch('./medical.json')
             .then(res => res.json())
             .then(data => setServices(data));
-        console.log(setServices);
+        console.log(services.length);
     }, []);
     return (
         <Container>

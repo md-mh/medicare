@@ -11,6 +11,7 @@ const useFirebase = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(true);
 
     const auth = getAuth();
 
@@ -37,6 +38,7 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message);
             })
+            .finally(() => { setLoading(false) });
     }
     const handleLogin = e => {
         e.preventDefault();
@@ -48,6 +50,7 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message);
             })
+            .finally(() => { setLoading(false) });
     }
 
     const signInUsingGoogle = () => {
@@ -60,6 +63,7 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message);
             })
+            .finally(() => { setLoading(false) });
     }
 
     const signInUsingGithub = () => {
@@ -72,24 +76,29 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message);
             })
+            .finally(() => { setLoading(false) });
     }
     const logOut = () => {
         signOut(auth)
             .then(() => { })
+            .finally(() => { setLoading(false) });
     }
 
-    useEffect(() => {
+    const unsubscribe = useEffect(() => {
         onAuthStateChanged(auth, user => {
             if (user) {
                 setUser(user);
             } else {
                 setUser({});
             }
+            setLoading(false);
         })
+        return () => unsubscribe;
     }, [])
     return {
         user,
         error,
+        loading,
         handlename,
         handleemail,
         handlepassword,
