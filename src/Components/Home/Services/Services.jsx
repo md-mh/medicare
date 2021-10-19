@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Serviceitem from './Serviceitem/Serviceitem'
 
+// Home page services component  
+
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {

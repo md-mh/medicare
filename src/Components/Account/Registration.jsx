@@ -10,6 +10,8 @@ const Registration = () => {
         <Container>
             <Row className="my-5">
                 <Col md={{ span: 4, offset: 1 }}>
+
+                    {/* Registration form  */}
                     <h2>Please  Registration </h2><br />
 
                     <Form onSubmit={registrationUsingEmail}>
@@ -34,6 +36,8 @@ const Registration = () => {
                     </Form>
                 </Col>
                 <Col md={{ span: 4, offset: 1 }}>
+
+                    {/* social login component  */}
                     <Sociallogin></Sociallogin>
                     <span>Already have an Account <Link to="/login"> Please Login</Link> </span>
                 </Col>

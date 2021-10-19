@@ -7,9 +7,12 @@ import './Account.css';
 
 const Sociallogin = () => {
     const { signInUsingGoogle, signInUsingGithub } = useAuth();
+
+    // handle login redirect 
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/';
+
 
     const handleGoogleLogin = () => {
         signInUsingGoogle()
@@ -28,6 +31,8 @@ const Sociallogin = () => {
     return (
         <div>
             <br /><h3>Social Login</h3><br />
+
+            {/* Social button  */}
 
             <Button variant="light" onClick={handleGoogleLogin}><AiFillGoogleCircle />    Google sign In</Button>
             <br /><br />

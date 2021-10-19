@@ -8,6 +8,7 @@ const Header = () => {
     const { user, logOut } = useAuth();
     return (
         <>
+            {/* Header and navbar area  */}
             <Navbar bg="light" expand="lg">
                 <Container>
                     <Navbar.Brand href="/"><h2>Medicare</h2></Navbar.Brand>

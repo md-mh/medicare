@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Profileitem from './Profileitem/Profileitem';
 
+// Doctors List page 
+
 const Profiles = () => {
     const [doctors, setDoctors] = useState([]);
 
