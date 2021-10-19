@@ -14,7 +14,7 @@ const Profiles = () => {
     console.log(doctors);
     return (
         <Container>
-            <h1 className="text-center py-3"><span className="text-primary">Our Doctors</span></h1>
+            <h1 className="text-center py-3">OUR <span className="text-primary">DOCTORS</span></h1>
             {/* Bootstrap responsive row */}
             <Row xs={1} md={2} lg={3} className="g-4 py-4">
                 {

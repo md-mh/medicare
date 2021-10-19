@@ -6,6 +6,7 @@ import Sociallogin from './Sociallogin';
 
 const Login = () => {
     const { error, handleemail, handlepassword, signInUsingEmail } = useAuth();
+
     const location = useLocation();
     const history = useHistory();
     const redirectUrl = location.state?.from || "/";

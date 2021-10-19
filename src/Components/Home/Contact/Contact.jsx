@@ -6,7 +6,7 @@ const Contact = () => {
         <Container>
             <Row className="align-items-center py-5">
                 <Col md={6} className="px-5">
-                    <h2><span className="text-primary">CONTACT</span> WITH US</h2>
+                    <h1><span className="text-primary">CONTACT</span> WITH US</h1>
                     <br />
                     <p>Cell: 01789654123</p>
                     <p>Email: support@medicare.com</p>

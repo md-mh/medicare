@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
-import { useParams } from "react-router-dom";
+import { Col, Container, Row, Button } from 'react-bootstrap';
+import { useParams } from 'react-router';
+
 
 const Singleservice = () => {
-    const { slug } = useParams();
-    const [service, setService] = useState([]);
-    const [details, setDetails] = useState([]);
+    const { serviceId } = useParams();
+    const [serviceDetails, setServiceDetails] = useState([]);
+    const [singleService, setSingleService] = useState({});
+    useEffect(
+        () => {
+            fetch('/medical.json')
+                .then(res => res.json())
+                .then(data => setServiceDetails(data))
+        }, []);
 
-    useEffect(() => {
-        fetch('./review.json')
-            .then(res => res.json())
-            .then(data => setService(data));
-    }, []);
-
-    useEffect(() => {
-        const found = service.find(single => single.id === slug)
-        setDetails(found)
-    }, [service, slug])
-
-    console.log(service);
-    console.log(details);
+    useEffect(
+        () => {
+            const foundServices = serviceDetails.find(service => service.id === serviceId)
+            setSingleService(foundServices);
+        }, [serviceDetails])
     return (
         <Container>
-            <h1 className="text-center py-3"><span className="text-primary">Our Service {slug}</span></h1>
-
+            <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                    <h1 className="my-5 text-primary text-center"> Our {singleService?.title} Service</h1>
+                    <img src={singleService?.img} alt="service" height="400px" />
+                    <p className="my-3"> {singleService?.description} </p>
+                    <Button variant="info" className="mb-5">Appointment Now</Button>
+                </Col>
+            </Row>
         </Container>
+
     );
 };
 

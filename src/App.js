@@ -22,7 +22,7 @@ function App() {
           <Route path="/home"> <Home></Home></Route>
           <Route path="/login"> <Login></Login></Route>
           <Route path="/registration"> <Registration></Registration> </Route>
-          <PrivateRoute path="/service/:slug"><Singleservice></Singleservice></PrivateRoute>
+          <PrivateRoute exact path="/service/:serviceId"><Singleservice></Singleservice></PrivateRoute>
           <PrivateRoute path="/review"> <Reviews></Reviews> </PrivateRoute >
           <PrivateRoute path="/profile"><Profiles></Profiles></PrivateRoute >
 
