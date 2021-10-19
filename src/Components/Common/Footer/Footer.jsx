@@ -10,8 +10,10 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col md={4}>
-                        <h4>INFORMATION</h4> <br />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magnam quisquam soluta neque laboriosam sapiente molestiae rerum impedit ad</p>
+                        <h4>IMPORTANT LINK</h4> <br />
+                        <p>Doctors List</p>
+                        <p>Patient Stories</p>
+                        <p>Login</p>
                     </Col>
                     <Col md={4}>
                         <h4>INFORMATION</h4> <br />

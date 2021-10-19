@@ -16,7 +16,7 @@ const Singleservice = () => {
     useEffect(() => {
         const found = service.find(single => single.id === slug)
         setDetails(found)
-    }, [service])
+    }, [service, slug])
 
     console.log(service);
     console.log(details);

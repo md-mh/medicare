@@ -23,8 +23,8 @@ function App() {
           <Route path="/login"> <Login></Login></Route>
           <Route path="/registration"> <Registration></Registration> </Route>
           <PrivateRoute path="/service/:slug"><Singleservice></Singleservice></PrivateRoute>
-          <Route path="/review"> <Reviews></Reviews> </Route>
-          <Route path="/profile"><Profiles></Profiles></Route>
+          <PrivateRoute path="/review"> <Reviews></Reviews> </PrivateRoute >
+          <PrivateRoute path="/profile"><Profiles></Profiles></PrivateRoute >
 
           <Route path='/*'><Nopage></Nopage></Route>
         </Switch>

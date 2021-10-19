@@ -30,9 +30,6 @@ const useFirebase = () => {
                 setError('');
                 setUser(result.user);
                 updateProfile(auth.currentUser, { displayName: name })
-                    .then(result => {
-                        setUser(result.user);
-                    })
             })
             .catch(error => {
                 setError(error.message);
