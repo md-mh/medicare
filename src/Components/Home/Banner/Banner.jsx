@@ -5,6 +5,7 @@ import banner2 from './../../../images/banner-2.jpg'
 import banner3 from './../../../images/banner-3.jpg'
 import './Banner.css'
 
+// Home page banner component
 const Banner = () => {
     return (
         <Container>

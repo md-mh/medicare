@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
 
+// Single service page details component 
 
 const Singleservice = () => {
     const { serviceId } = useParams();

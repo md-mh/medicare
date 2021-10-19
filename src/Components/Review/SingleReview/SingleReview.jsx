@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
+// Review List single item component
+
 const SingleReview = (props) => {
     const { title, description } = props.service;
 

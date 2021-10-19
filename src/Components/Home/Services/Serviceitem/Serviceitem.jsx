@@ -3,6 +3,8 @@ import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Serviceitem.css'
 
+// Home page single service item components
+
 const Serviceitem = (props) => {
     // take data using props 
     const { id, title, img, description } = props.service;

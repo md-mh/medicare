@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import doctor1 from './../../../images/doctor1.jpg'
 import doctor2 from './../../../images/doctor2.jpg'
 
+// Home page why choose us component  
 const About = () => {
     return (
         <Container>

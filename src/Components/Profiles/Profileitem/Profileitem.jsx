@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 
+// Doctors List single item component
+
 const Profileitem = (props) => {
 
     const { name, img, specials } = props.doctor;

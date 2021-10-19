@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Container, Form, Row, Button } from 'react-bootstrap';
 
+// Home page contact component  
+
 const Contact = () => {
     return (
         <Container>

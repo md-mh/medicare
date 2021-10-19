@@ -7,6 +7,7 @@ import Sociallogin from './Sociallogin';
 const Login = () => {
     const { error, handleemail, handlepassword, signInUsingEmail } = useAuth();
 
+    // handle login redirect 
     const location = useLocation();
     const history = useHistory();
     const redirectUrl = location.state?.from || "/";
@@ -23,6 +24,8 @@ const Login = () => {
         <Container>
             <Row className="my-5">
                 <Col md={{ span: 4, offset: 1 }}>
+
+                    {/* login form  */}
                     <h2>Please Login</h2><br />
                     <Form onSubmit={handleEmailLogin}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -41,6 +44,8 @@ const Login = () => {
                     </Form>
                 </Col>
                 <Col md={{ span: 4, offset: 1 }}>
+
+                    {/* social login component  */}
                     <Sociallogin></Sociallogin>
                     <span>Don't have an Account <Link to="/registration"> Please Registration</Link> </span>
                 </Col>

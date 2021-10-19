@@ -8,6 +8,7 @@ const Footer = () => {
         <footer className="py-2">
             <br /><br /><br />
             <Container>
+                {/* Footer area  */}
                 <Row>
                     <Col md={4}>
                         <h4>IMPORTANT LINK</h4> <br />
