@@ -17,7 +17,7 @@ const Serviceitem = (props) => {
                     <Card.Text>{description.slice(0, 150)}</Card.Text>
 
                     <Link to={`service/${id}`}>
-                        <Button variant="info"> Book for {title}</Button>
+                        <Button variant="info"> Appointment for {title}</Button>
                     </Link>
                 </Card.Body>
             </Card>

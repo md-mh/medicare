@@ -1,20 +1,29 @@
 import React from 'react';
 import { Form, Button, Row, Col, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import Sociallogin from './Sociallogin';
 
 const Login = () => {
-    const { error, handleemail, handlepassword, handleLogin } = useAuth();
+    const { error, handleemail, handlepassword, signInUsingEmail } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirectUrl = location.state?.from || "/";
 
-
+    const handleEmailLogin = e => {
+        e.preventDefault();
+        signInUsingEmail()
+            .then(result => {
+                history.push(redirectUrl);
+            })
+    }
 
     return (
         <Container>
             <Row className="my-5">
                 <Col md={{ span: 4, offset: 1 }}>
                     <h2>Please Login</h2><br />
-                    <Form onSubmit={handleLogin}>
+                    <Form onSubmit={handleEmailLogin}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control onBlur={handleemail} type="email" placeholder="Enter email" />

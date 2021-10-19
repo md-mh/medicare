@@ -5,14 +5,14 @@ import useAuth from '../../Hooks/useAuth';
 import Sociallogin from './Sociallogin';
 
 const Registration = () => {
-    const { error, handleRegistration, handlename, handleemail, handlepassword } = useAuth();
+    const { error, registrationUsingEmail, handlename, handleemail, handlepassword } = useAuth();
     return (
         <Container>
             <Row className="my-5">
                 <Col md={{ span: 4, offset: 1 }}>
                     <h2>Please  Registration </h2><br />
 
-                    <Form onSubmit={handleRegistration}>
+                    <Form onSubmit={registrationUsingEmail}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Username</Form.Label>
                             <Form.Control onBlur={handlename} type="text" placeholder="Enter your nickname" />

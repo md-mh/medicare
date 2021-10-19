@@ -8,11 +8,10 @@ const Services = () => {
         fetch('./medical.json')
             .then(res => res.json())
             .then(data => setServices(data));
-        console.log(services.length);
     }, []);
     return (
         <Container>
-            <h1 className="text-center py-3">Our <span className="text-primary">Service</span></h1>
+            <h1 className="text-center py-3">OUR <span className="text-primary">SERVICES</span></h1>
             {/* Bootstrap responsive row */}
             <Row xs={1} md={2} lg={3} className="g-4 py-4">
                 {

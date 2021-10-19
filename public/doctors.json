@@ -1,0 +1,56 @@
+[
+  {
+    "id": "201",
+    "specials": "Anesthesiology",
+    "name": "Nahid Zaman",
+    "img": "https://i.ibb.co/nPmhzPk/dr1.png"
+  },
+  {
+    "id": "202",
+    "specials": "Clinical Nutrition",
+    "name": "Marufa Akther",
+    "img": "https://i.ibb.co/Ms1WW4V/dr2.png"
+  },
+  {
+    "id": "203",
+    "specials": "Cardiovascular",
+    "name": "Mahedi Hasan",
+    "img": "https://i.ibb.co/CWvHywP/dr3.png"
+  },
+  {
+    "id": "204",
+    "specials": "Pediatrics",
+    "name": "Priya",
+    "img": "https://i.ibb.co/KWv564z/dr4.png"
+  },
+  {
+    "id": "205",
+    "specials": "Neurosurgery",
+    "name": "yang yo",
+    "img": "https://i.ibb.co/y82tW8v/dr5.png"
+  },
+  {
+    "id": "206",
+    "specials": "Cancer Care",
+    "name": "Mim",
+    "img": "https://i.ibb.co/sHRZLnj/dr6.png"
+  },
+  {
+    "id": "207",
+    "specials": "Pediatrics",
+    "name": "Sadia",
+    "img": "https://i.ibb.co/nn81XV2/dr7.png"
+  },
+  {
+    "id": "208",
+    "specials": "Neurosurgery",
+    "name": "Ifthaker",
+    "img": "https://i.ibb.co/YZv7T2M/dr8.png"
+  },
+  {
+    "id": "209",
+    "specials": "Cancer Care",
+    "name": "katri",
+    "img": "https://i.ibb.co/2vsRYqr/dr9.png"
+  }
+]

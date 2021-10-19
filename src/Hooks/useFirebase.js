@@ -4,6 +4,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, onAut
 
 
 initialzeAuthentization();
+const auth = getAuth();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
@@ -12,8 +13,6 @@ const useFirebase = () => {
     const [password, setPassword] = useState('')
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
-
-    const auth = getAuth();
 
     const handlename = e => {
         setName(e.target.value);
@@ -24,7 +23,7 @@ const useFirebase = () => {
     const handlepassword = e => {
         setPassword(e.target.value);
     }
-    const handleRegistration = e => {
+    const registrationUsingEmail = e => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
@@ -40,13 +39,8 @@ const useFirebase = () => {
             })
             .finally(() => { setLoading(false) });
     }
-    const handleLogin = e => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                setError('');
-                setUser(result.user);
-            })
+    const signInUsingEmail = () => {
+        return signInWithEmailAndPassword(auth, email, password)
             .catch(error => {
                 setError(error.message);
             })
@@ -55,11 +49,7 @@ const useFirebase = () => {
 
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setError('');
-                setUser(result.user);
-            })
+        return signInWithPopup(auth, googleProvider)
             .catch(error => {
                 setError(error.message);
             })
@@ -68,11 +58,7 @@ const useFirebase = () => {
 
     const signInUsingGithub = () => {
         const githubProvider = new GithubAuthProvider();
-        signInWithPopup(auth, githubProvider)
-            .then(result => {
-                setError('');
-                setUser(result.user)
-            })
+        return signInWithPopup(auth, githubProvider)
             .catch(error => {
                 setError(error.message);
             })
@@ -102,8 +88,8 @@ const useFirebase = () => {
         handlename,
         handleemail,
         handlepassword,
-        handleRegistration,
-        handleLogin,
+        registrationUsingEmail,
+        signInUsingEmail,
         signInUsingGoogle,
         signInUsingGithub,
         logOut

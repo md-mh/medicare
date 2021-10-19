@@ -1,24 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { Container } from 'react-bootstrap';
+import { useParams } from "react-router-dom";
 
 const Singleservice = () => {
     const { slug } = useParams();
-    const [one, setOne] = useState([]);
-    useEffect(() => {
-        const url = `./ medical.json/`
-        console.log(url)
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setOne(data));
-        console.log(one);
-    }, []);
-    return (
-        <div>
-            <h2> This is {slug}</h2>
-            <h2> This is {one.length}</h2>
-        </div>
-    );
-}
+    const [service, setService] = useState([]);
+    const [details, setDetails] = useState([]);
 
+    useEffect(() => {
+        fetch('./review.json')
+            .then(res => res.json())
+            .then(data => setService(data));
+    }, []);
+
+    useEffect(() => {
+        const found = service.find(single => single.id === slug)
+        setDetails(found)
+    }, [service])
+
+    console.log(service);
+    console.log(details);
+    return (
+        <Container>
+            <h1 className="text-center py-3"><span className="text-primary">Our Service {slug}</span></h1>
+
+        </Container>
+    );
+};
 
 export default Singleservice;
